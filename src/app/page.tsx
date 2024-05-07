@@ -28,7 +28,7 @@ export default function Home() {
           </div>
           <div className="card-message">
             10 vertices, filled with #87CEEB color, and a vertex radius of 10.
-            The lines are #FFA500. At 10 fps.
+            The lines are #FFA500. (10 fps)
           </div>
         </div>
         <div className="card">
@@ -45,7 +45,7 @@ export default function Home() {
           </div>
           <div className="card-message">
             15 vertices, filled with #FFA500 color, and a vertex radius of 15.
-            Velocity is 1 and entropy 0.8. At 15 fps.
+            Velocity is 1 and entropy 0.8. (15 fps)
           </div>
         </div>
         <div className="card">
@@ -60,22 +60,23 @@ export default function Home() {
           </div>
           <div className="card-message">
             3 vertices, filled with #FFC0CB color, and a vertex radius of 20.
-            The lines are #00FF00. At 20 fps.
+            The lines are #00FF00. (20 fps)
           </div>
         </div>
         <div className="card">
           <div className="card-panel">
             <MovingMesh
-              fps={25}
-              vertexCount={25}
+              fps={10}
+              vertexCount={10}
               vertexFill={"#00FF00"}
               radius={10}
               lineStroke="#FF0000"
+              velocity={1.0}
             />
           </div>
           <div className="card-message">
-            25 vertices, filled with #00FF00 color, and a vertex radius of 10.
-            The lines are #FF0000. At 25 fps.
+            10 vertices, filled with #00FF00 color, and a vertex radius of 10.
+            Velocity is set to 1.0. The lines are #FF0000. (25 fps)
           </div>
         </div>
         <div className="card">
@@ -91,25 +92,25 @@ export default function Home() {
           </div>
           <div className="card-message">
             30 vertices, filled with #FF0000 color, and a vertex radius of 2.
-            The lines are #FFFF00. It has a gravity of 0.01. At 30 fps.
+            The lines are #FFFF00. It has a gravity of 0.01. (30 fps)
           </div>
         </div>
         <div className="card">
           <div className="card-panel">
             <MovingMesh
               fps={35}
-              vertexCount={35}
-              vertexFill={"none"}
-              radius={5}
+              vertexCount={5}
+              vertexFill={"#800080"}
+              radius={2}
               lineStroke="#800080"
-              vertexStroke="#FFFF00"
-              vertexStrokeWidth={2}
+              lineStrokeWidth={4}
+              vertexStroke="none"
+              vertexStrokeWidth={0}
             />
           </div>
           <div className="card-message">
-            35 vertices, not filled, and a vertex radius of 5. The lines are
-            stroke with #800080 color. The vertices are #FFFF00 color and have a
-            stroke width of 2. At 35 fps.
+            5 vertices, filled with the same color as the line (#800080), and a
+            vertex radius of 2 and a lineStrokeWidth of 4. (35 fps)
           </div>
         </div>
         <div className="card">
@@ -124,7 +125,7 @@ export default function Home() {
           </div>
           <div className="card-message">
             40 vertices, filled with #800080 color, and a vertex radius of 3.
-            The lines are #008080. At 40 fps.
+            The lines are #008080. (40 fps)
           </div>
         </div>
         <div className="card">
@@ -142,7 +143,7 @@ export default function Home() {
           <div className="card-message">
             15 vertices, filled with #008080 color, and a vertex radius of 4.
             The lines are #FF00FF. It has an entropy of 0.8 and a velocity of
-            0.5. At 45 fps.
+            0.5. (45 fps)
           </div>
         </div>
         <div className="card">
@@ -158,7 +159,7 @@ export default function Home() {
           </div>
           <div className="card-message">
             20 vertices, filled with #FF00FF color, and a vertex radius of 5.
-            The lines are #87CEEB. It has a gravity of -0.02. At 30 fps.
+            The lines are #87CEEB. It has a gravity of -0.02. (30 fps)
           </div>
         </div>
       </div>
