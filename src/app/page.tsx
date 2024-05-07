@@ -45,7 +45,7 @@ export default function Home() {
           </div>
           <div className="card-message">
             15 vertices, filled with #FFA500 color, and a vertex radius of 15.
-            Velocity is 1 and entropy 0.8. (15 fps)
+            lineStroke is set to none. Velocity is 1 and entropy 0.8. (15 fps)
           </div>
         </div>
         <div className="card">
@@ -117,15 +117,18 @@ export default function Home() {
           <div className="card-panel">
             <MovingMesh
               fps={40}
-              vertexCount={40}
-              vertexFill={"#800080"}
-              radius={3}
+              vertexCount={10}
+              vertexFill={"#e5e7eb"}
+              vertexStroke="#008080"
+              vertexStrokeWidth={4}
+              radius={9}
               lineStroke="#008080"
+              lineStrokeWidth={4}
             />
           </div>
           <div className="card-message">
-            40 vertices, filled with #800080 color, and a vertex radius of 3.
-            The lines are #008080. (40 fps)
+            10 vertices, filled with the backgound colour and a
+            vertexStrokeWidth the same as the lineStrokeWidth. (40 fps)
           </div>
         </div>
         <div className="card">
