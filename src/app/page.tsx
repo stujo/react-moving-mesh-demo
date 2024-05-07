@@ -19,21 +19,6 @@ export default function Home() {
         <div className="card">
           <div className="card-panel">
             <MovingMesh
-              fps={10}
-              vertexCount={10}
-              vertexFill={"#87CEEB"}
-              radius={10}
-              lineStroke="#FFA500"
-            />
-          </div>
-          <div className="card-message">
-            10 vertices, filled with #87CEEB color, and a vertex radius of 10.
-            The lines are #FFA500. (10 fps)
-          </div>
-        </div>
-        <div className="card">
-          <div className="card-panel">
-            <MovingMesh
               fps={15}
               vertexCount={15}
               vertexFill={"#FFA500"}
@@ -61,38 +46,6 @@ export default function Home() {
           <div className="card-message">
             3 vertices, filled with #FFC0CB color, and a vertex radius of 20.
             The lines are #00FF00. (20 fps)
-          </div>
-        </div>
-        <div className="card">
-          <div className="card-panel">
-            <MovingMesh
-              fps={10}
-              vertexCount={10}
-              vertexFill={"#00FF00"}
-              radius={10}
-              lineStroke="#FF0000"
-              velocity={1.0}
-            />
-          </div>
-          <div className="card-message">
-            10 vertices, filled with #00FF00 color, and a vertex radius of 10.
-            Velocity is set to 1.0. The lines are #FF0000. (25 fps)
-          </div>
-        </div>
-        <div className="card">
-          <div className="card-panel">
-            <MovingMesh
-              fps={30}
-              vertexCount={30}
-              vertexFill={"#FF0000"}
-              radius={2}
-              lineStroke="#FFFF00"
-              gravity={0.01}
-            />
-          </div>
-          <div className="card-message">
-            30 vertices, filled with #FF0000 color, and a vertex radius of 2.
-            The lines are #FFFF00. It has a gravity of 0.01. (30 fps)
           </div>
         </div>
         <div className="card">
