@@ -1,112 +1,155 @@
-import Image from "next/image";
+"use client";
+
+import React from "react";
+import MovingMesh from "react-moving-mesh";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="bg-white rounded-lg p-4">
+          <div className="bg-gray-200 p-2">
+            <MovingMesh
+              fps={10}
+              vertexCount={10}
+              vertexFill={"#87CEEB"}
+              radius={10}
+              lineStroke="#FFA500"
             />
-          </a>
+          </div>
+          <div className="text-gray-700">
+            10 vertices, filled with #87CEEB color, and a vertex radius of 10.
+            The lines are stroke with #FFA500 color.
+          </div>
         </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+        <div className="bg-white rounded-lg p-4">
+          <div className="bg-gray-200 p-2">
+            <MovingMesh
+              fps={15}
+              vertexCount={15}
+              vertexFill={"#FFA500"}
+              radius={15}
+              lineStroke="none"
+            />
+          </div>
+          <div className="text-gray-700">
+            15 vertices, filled with #FFA500 color, and a vertex radius of 15.
+            The lines are not stroke.
+          </div>
+        </div>
+        <div className="bg-white rounded-lg p-4">
+          <div className="bg-gray-200 p-2">
+            <MovingMesh
+              fps={20}
+              vertexCount={3}
+              vertexFill={"#FFC0CB"}
+              radius={20}
+              lineStroke="#00FF00"
+            />
+          </div>
+          <div className="text-gray-700">
+            3 vertices, filled with #FFC0CB color, and a vertex radius of 20.
+            The lines are stroke with #00FF00 color.
+          </div>
+        </div>
+        <div className="bg-white rounded-lg p-4">
+          <div className="bg-gray-200 p-2">
+            <MovingMesh
+              fps={25}
+              vertexCount={25}
+              vertexFill={"#00FF00"}
+              radius={10}
+              lineStroke="#FF0000"
+            />
+          </div>
+          <div className="text-gray-700">
+            25 vertices, filled with #00FF00 color, and a vertex radius of 10.
+            The lines are stroke with #FF0000 color.
+          </div>
+        </div>
+        <div className="bg-white rounded-lg p-4">
+          <div className="bg-gray-200 p-2">
+            <MovingMesh
+              fps={30}
+              vertexCount={30}
+              vertexFill={"#FF0000"}
+              radius={2}
+              lineStroke="#FFFF00"
+              gravity={0.01}
+            />
+          </div>
+          <div className="text-gray-700">
+            30 vertices, filled with #FF0000 color, and a vertex radius of 2.
+            The lines are stroke with #FFFF00 color. It has a gravity of 0.01.
+          </div>
+        </div>
+        <div className="bg-white rounded-lg p-4">
+          <div className="bg-gray-200 p-2">
+            <MovingMesh
+              fps={35}
+              vertexCount={35}
+              vertexFill={"none"}
+              radius={5}
+              lineStroke="#800080"
+              vertexStroke="#FFFF00"
+              vertexStrokeWidth={2}
+            />
+          </div>
+          <div className="text-gray-700">
+            35 vertices, not filled, and a vertex radius of 5. The lines are
+            stroke with #800080 color. The vertices are stroke with #FFFF00
+            color and have a stroke width of 2.
+          </div>
+        </div>
+        <div className="bg-white rounded-lg p-4">
+          <div className="bg-gray-200 p-2">
+            <MovingMesh
+              fps={40}
+              vertexCount={40}
+              vertexFill={"#800080"}
+              radius={3}
+              lineStroke="#008080"
+            />
+          </div>
+          <div className="text-gray-700">
+            40 vertices, filled with #800080 color, and a vertex radius of 3.
+            The lines are stroke with #008080 color.
+          </div>
+        </div>
+        <div className="bg-white rounded-lg p-4">
+          <div className="bg-gray-200 p-2">
+            <MovingMesh
+              fps={45}
+              vertexCount={15}
+              vertexFill={"#008080"}
+              radius={4}
+              lineStroke="#FF00FF"
+              entropy={0.8}
+              velocity={0.5}
+            />
+          </div>
+          <div className="text-gray-700">
+            15 vertices, filled with #008080 color, and a vertex radius of 4.
+            The lines are stroke with #FF00FF color. It has an entropy of 0.8
+            and a velocity of 0.5.
+          </div>
+        </div>
+        <div className="bg-white rounded-lg p-4">
+          <div className="bg-gray-200 p-2">
+            <MovingMesh
+              fps={30}
+              vertexCount={20}
+              vertexFill={"#FF00FF"}
+              radius={5}
+              lineStroke="#87CEEB"
+              gravity={-0.02}
+            />
+          </div>
+          <div className="text-gray-700">
+            20 vertices, filled with #FF00FF color, and a vertex radius of 5.
+            The lines are stroke with #87CEEB color. It has a gravity of -0.02.
+          </div>
+        </div>
       </div>
     </main>
   );
