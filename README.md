@@ -1,8 +1,6 @@
 ## react-moving-mesh-demo
 
-This app is a demo app for react-moving-mesh which is a react component
-
-A [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This app is a demo app for [`react-moving-mesh`](https://www.npmjs.com/package/react-moving-mesh), which is a React component.
 
 ## Getting Started
 
@@ -29,3 +27,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 # Screenshot
 
 ![App Screenshot](docs/screenshot.png)
+
+# Notes
+
+This demo was created with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
